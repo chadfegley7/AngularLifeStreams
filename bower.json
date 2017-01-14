@@ -1,0 +1,26 @@
+{
+  "name": "real_lifestreams_angular",
+  "description": "Life Streams re-done in Angular",
+  "main": "server.js",
+  "authors": [
+    "Chad Fegley"
+  ],
+  "license": "ISC",
+  "homepage": "localhost:8000",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-auto-validate": "^1.19.6",
+    "angular": "^1.6.1",
+    "jquery": "^3.1.1",
+    "angular-ui-router": "^0.3.2",
+    "bootstrap": "^3.3.7",
+    "angular-bootstrap": "^2.4.0",
+    "ui-navbar": "^0.5.2"
+  }
+}

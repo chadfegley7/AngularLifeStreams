@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="realAngularLifeStreams">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>LifeStreams Angular</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/static/stylesheets/nav.css">
+
+    <script src="./bower_components/angular/angular.min.js"></script>
+
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-sanitize.js"></script>
+
+    <script type="text/javascript" src="./js/config/routes.js"></script>
+
+    <script type="text/javascript" src="./js/model/authFactory.js"></script>
+
+    <script type="text/javascript" src="./js/model/loginFactory.js"></script>
+
+    <script type="text/javascript" src="./js/controller/authController.js"></script>
+
+    <script type="text/javascript" src="./js/controller/loginController.js"></script>
+
+    <script src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script src="./bower_components/ui-navbar/release/js/ui-navbar.js"></script>
+
+    <script src="./bower_components/angular-auto-validate/dist/jcs-auto-validate.js"></script>
+
+  </head>
+
+  <body>
+
+    <div ng-include="'static/partials/nav.html'"></div>
+
+    <div class='' ui-view>
+
+    </div>
+
+  </body>
+
+</html>

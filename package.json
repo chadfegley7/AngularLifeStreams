@@ -1,0 +1,32 @@
+{
+  "name": "real_lifestreams_angular",
+  "version": "1.0.0",
+  "description": "Life Streams re-done in Angular",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Chad Fegley",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "crypto": "0.0.3",
+    "express": "^4.14.0",
+    "express-jwt": "^5.1.0",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "jsonwebtoken": "^7.2.1",
+    "kurento-client": "^6.6.0",
+    "minimist": "^1.2.0",
+    "mongoose": "^4.7.6",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "request": "^2.79.0",
+    "socket.io": "^1.7.2",
+    "url": "^0.11.0",
+    "ws": "^1.1.1"
+  }
+}
