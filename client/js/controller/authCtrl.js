@@ -1,4 +1,4 @@
-realAngularLifeStreams.controller('authController', function($scope, $state, auth){
+realAngularLifeStreams.controller('authCtrl', function($scope, $state, auth){
 
   $scope.user = {};
 
@@ -54,12 +54,11 @@ realAngularLifeStreams.controller('authController', function($scope, $state, aut
 
 });
 
-realAngularLifeStreams.controller('NavCtrl', function($scope, auth,$uibModal){
+angularLifeStreams.controller('NavCtrl', function($scope, auth,$uibModal){
 
     $scope.isLoggedIn = auth.isLoggedIn;
 
     $scope.currentUser = auth.currentUser;
-
+    
     $scope.logOut = auth.logOut;
-
   });
