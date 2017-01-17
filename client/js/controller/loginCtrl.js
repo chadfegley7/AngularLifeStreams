@@ -1,4 +1,4 @@
-realAngularLifeStreams.controller('loginCtrl', ($scope, $window, auth, loginFactory, $document){
+realAngularLifeStreams.controller('loginCtrl', function($scope, $window, auth, loginFactory, $document){
 
   $scope.isLoggedIn = auth.isLoggedIn;
 
@@ -9,5 +9,5 @@ realAngularLifeStreams.controller('loginCtrl', ($scope, $window, auth, loginFact
   }
 
   $scope.currentUser = auth.currentUser();
-  
-})
+
+});

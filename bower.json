@@ -21,6 +21,7 @@
     "angular-ui-router": "^0.3.2",
     "bootstrap": "^3.3.7",
     "angular-bootstrap": "^2.4.0",
-    "ui-navbar": "^0.5.2"
+    "ui-navbar": "^0.5.2",
+    "angular-stripe": "^4.2.12"
   }
 }

@@ -15,6 +15,10 @@
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="/static/stylesheets/nav.css">
 
     <script src="./bower_components/angular/angular.min.js"></script>
@@ -27,13 +31,13 @@
 
     <script type="text/javascript" src="./js/config/routes.js"></script>
 
-    <script type="text/javascript" src="./js/model/authFactory.js"></script>
+    <script type="text/javascript" src="./js/factory/authFactory.js"></script>
 
-    <script type="text/javascript" src="./js/model/loginFactory.js"></script>
+    <script type="text/javascript" src="./js/factory/loginFactory.js"></script>
 
-    <script type="text/javascript" src="./js/controller/authController.js"></script>
+    <script type="text/javascript" src="./js/controller/authCtrl.js"></script>
 
-    <script type="text/javascript" src="./js/controller/loginController.js"></script>
+    <script type="text/javascript" src="./js/controller/loginCtrl.js"></script>
 
     <script src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
@@ -43,11 +47,17 @@
 
     <script src="./bower_components/angular-auto-validate/dist/jcs-auto-validate.js"></script>
 
+    <script src="./bower_components/kurento-utils/js/kurento-utils.min.js"></script>
+
+    <script src="./bower_components/webrtc-adapter/release/adapter.js"></script>
+
+    <script src="./js/config/video.js"></script>
+
   </head>
 
   <body>
 
-    <div ng-include="'static/partials/nav.html'"></div>
+    <!-- <div ng-include="'static/partials/nav.html'"></div> -->
 
     <div class='' ui-view>
 
