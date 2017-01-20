@@ -16,7 +16,7 @@ realAngularLifeStreams.config(function($stateProvider, $urlRouterProvider){
 
       templateUrl: './../static/partials/home.html',
 
-      controller: 'authController'
+      controller: 'authCtrl'
 
     })
 
@@ -26,7 +26,7 @@ realAngularLifeStreams.config(function($stateProvider, $urlRouterProvider){
 
       templateUrl: './../static/partials/login.html',
 
-      controller: 'loginController'
+      controller: 'loginCtrl'
 
     });
 

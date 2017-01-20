@@ -14,7 +14,7 @@ module.exports = {
 
   newReg: function(req, res, next){
 
-    if(!req.body.username || !req.bod.password || !req.body.email){
+    if(!req.body.username || !req.body.password || !req.body.email){
 
       return res.status(400).json({ message: "Please complete all required fields."});
 

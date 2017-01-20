@@ -10,11 +10,11 @@ var UserSchema = new mongoose.Schema({
 
   username: {type: String, unique: true},
 
+  email: String,
+
   hash: String,
 
-  salt: String,
-
-  email: String
+  salt: String
 
 });
 

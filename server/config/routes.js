@@ -10,9 +10,9 @@ var request = require('request');
 
 module.exports = function(app){
 
-  app.post('/register', function(req, res, next){
+  app.post('/home', function(req, res, next){
 
-    user.newReg(req, res, next)
+    user.newReg(req, res, next);
 
   });
 

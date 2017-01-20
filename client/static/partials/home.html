@@ -173,19 +173,19 @@
 
       with Angular and create a new user. -->
 
-      <div class="left" ng-controller="authCtrl">
+      <div class="left form-group" ng-controller="authCtrl">
 
         <h1>Sign up</h1>
 
-        <form>
+        <form action="/home" method="POST">
 
-          <input type="text" name="username" placeholder="Username" />
+          <input type="text" name="username" ng-model="new_user.username" placeholder="Username" />
 
-          <input type="text" name="email" placeholder="E-mail" />
+          <input type="text" name="email" ng-model="new_user.email" placeholder="E-mail" />
 
-          <input type="password" name="password" placeholder="Password" />
+          <input type="password" name="password" ng-model="new_user.password" placeholder="Password" />
 
-          <input type="password" name="password2" placeholder="Retype password" />
+          <input type="password" name="confirm_password" ng-model="new_user.confirm_password" placeholder="Retype password" />
 
           <input type="submit" name="signup_submit" value="Sign me up" ng-click="register()" />
 
