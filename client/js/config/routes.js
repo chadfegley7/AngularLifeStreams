@@ -18,16 +18,22 @@ realAngularLifeStreams.config(function($stateProvider, $urlRouterProvider){
 
       controller: 'authCtrl'
 
+      // onEnter: function($state, auth){
+      //
+      //   if(auth.isLoggedIn()){
+      //
+      //     $state.go('home');
+      //   }
+      // }
+
     })
 
-    .state('login', {
+    .state('explore', {
 
-      url: '/login',
+      url: '/explore',
 
-      templateUrl: './../static/partials/login.html',
+      templateUrl: './../static/partials/explore.html'
 
-      controller: 'loginCtrl'
-
-    });
+    })
 
 });

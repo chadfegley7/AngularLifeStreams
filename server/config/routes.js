@@ -1,4 +1,4 @@
-var user = require('../controllers/users.js');
+var User = require('../controllers/users.js');
 
 var jwt = require('express-jwt');
 
@@ -10,16 +10,14 @@ var request = require('request');
 
 module.exports = function(app){
 
-  app.post('/home', function(req, res, next){
+  app.get('/', function(req, res){
 
-    user.newReg(req, res, next);
-
-  });
-
-  app.post('/login', function(req, res, next){
-
-    user.logIn(req, ers, next)
+    res.sendFile(__dirname + '../../client/index.html');
 
   });
+
+  app.post('/register', User.create);
+
+  app.post('/login', User.logIn);
 
 };

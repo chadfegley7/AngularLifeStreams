@@ -8,7 +8,7 @@ realAngularLifeStreams.controller('authCtrl', function($scope, $state, auth){
 
   $scope.register = function(){
 
-    auth.register($scope.new_user).error(function(error){
+    auth.register($scope.new_user).then(function(){
 
       if (typeof error === 'string'){
 
@@ -22,7 +22,7 @@ realAngularLifeStreams.controller('authCtrl', function($scope, $state, auth){
 
       else{
 
-        $scope.error = error;
+        // $scope.error = error;
 
         $scope.new_user.password = "";
 
@@ -34,19 +34,19 @@ realAngularLifeStreams.controller('authCtrl', function($scope, $state, auth){
 
       $state.go('home');
 
+      console.log($scope.new_user);
+
     });
 
   };
 
   $scope.logIn = function(){
 
-    auth.logIn($scope.login_user).error(function(error){
+    auth.logIn($scope.login_user).then(function(){
 
-      $scope.error = error;
+      $state.go('explore');
 
-    }).then(function(){
-
-      $state.go('success');
+      console.log($scope.user);
 
     });
 

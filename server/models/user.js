@@ -6,6 +6,10 @@ var jwt = require('jsonwebtoken');
 
 var secret = "3Nc4Yp78On";
 
+// var Schema = mongoose.Schema;
+//
+// var ObjectId = mongoose.Schema.ObjectId;
+
 var UserSchema = new mongoose.Schema({
 
   username: {type: String, unique: true},

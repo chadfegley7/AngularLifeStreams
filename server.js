@@ -14,6 +14,8 @@ var fs = require('fs');
 
 var minimist = require('minimist');
 
+var socket = require('./client/js/config/socket.js');
+
 var url = require('url');
 
 var https = require('https');
@@ -21,8 +23,6 @@ var https = require('https');
 var ws = require('ws');
 
 var kurento = require('kurento-client');
-
-var port = 8443;
 
 var app = express();
 
@@ -54,6 +54,8 @@ require('./server/config/routes.js')(app);
 //
 // })
 
+socket(server);
+
 var idCounter = 0;
 
 var candidatesQueue = {};
@@ -82,13 +84,15 @@ var argv = minimist(process.argv.slice(2), {
 
 		as_uri: 'https://localhost:8443/',
 
-		ws_uri: 'ws://localhost:8443'
+		ws_uri: 'ws://localhost:8000'
 
 	}
 
 });
 
 var asUrl = url.parse(argv.as_uri);
+
+var port = asUrl.port;
 
 var server = https.createServer(options, app).listen(port, function() {
 

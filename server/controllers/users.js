@@ -12,17 +12,17 @@ var auth = jwt({ secret: secret, userProperty: 'payload'});
 
 module.exports = {
 
-  newReg: function(req, res, next){
-
-    if(!req.body.username || !req.body.password || !req.body.email){
-
-      return res.status(400).json({ message: "Please complete all required fields."});
-
-    }
+  create: function(req, res){
 
     if(req.body.password !== req.body.confirm_password){
 
       return res.status(400).json({ message: "Incorrect Password"});
+
+    }
+
+    if(!req.body.username || !req.body.password || !req.body.email){
+
+      return res.status(400).json({ message: "Please complete all required fields."});
 
     }
 
@@ -32,16 +32,29 @@ module.exports = {
 
     user.email = req.body.email;
 
-    user.setPassword(req.body.password);
+    user.setPassword(req.body.password)
 
-    user.save(function(err){
+    user.save(function (err){
+
+      if(err){ return console.log(err); }
+
+      return res.json({token: user.generateJWT()})
+
+    });
+
+  },
+
+  delete: function(req, res){
+
+    User.remove({ _id: req.params.id }, function(err){
 
       if(err){
 
-        return next(err);
+        return res.json(err);
 
       }
-      return res.json({ token: user.generateJWT()})
+
+      return res.json(true);
 
     });
 
@@ -55,7 +68,7 @@ module.exports = {
 
     }
 
-    passport.authenticate('local', function(err, user, info){
+    passport.authenticate('local', function(err, User, info){
 
       if(err){
 
@@ -63,9 +76,9 @@ module.exports = {
 
       }
 
-      if(user){
+      if(User){
 
-        return res.json({ token: user.generateJWT()});
+        return res.json({ token: User.generateJWT()});
 
       }
 

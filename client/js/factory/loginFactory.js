@@ -22,7 +22,7 @@ realAngularLifeStreams.factory('loginFactory', function($http){
 
     console.log(newUser, "loginFactory");
 
-    $http.post('/sign_up', newUser).success(function(output){
+    $http.post('/register', newUser).success(function(output){
 
       console.log(output, "output from factory")
 
@@ -41,5 +41,5 @@ realAngularLifeStreams.factory('loginFactory', function($http){
   // }
 
   return factory;
-  
+
 })
